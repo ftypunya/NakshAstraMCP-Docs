@@ -11,13 +11,17 @@ NakshAstraMCP provides AI agents (Claude, Cursor, etc.) with deep, structural un
 - **Query Latency (p95)**: **1.11ms** (Ultra-low latency indexing engine)
 - **Extensibility**: Support for Python, JavaScript, TypeScript, and more via high-performance Tree-sitter parsers.
 
+![NakshAstraMCP Dashboard - Search](assets/dashboard_search.png)
+
 ### Key Features
 - 🔍 **Hybrid Multi-Repo Search** — Search across all your projects simultaneously.
 - 🧠 **Semantic Reranking** — Results are reordered by query intent for maximum relevance.
 - 🌳 **AST-Aware Snippets** — Extracts meaningful code blocks, not just line-based chunks.
 - 📊 **Intelligent Scoring** — Ranks symbol importance across the entire codebase.
 - 👁️ **Real-Time Watcher** — Automatically updates the index as you edit files.
-- 🔒 **Privacy-First** — 100% local. Your code never leaves your machine.
+- 🧹 **Operational Resilience** — Memory Guard, WAL checkpointing, and graceful shutdown.
+
+![NakshAstraMCP Dashboard - Statistics](assets/dashboard_stats.png)
 
 ---
 
