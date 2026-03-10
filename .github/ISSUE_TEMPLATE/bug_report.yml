@@ -1,0 +1,45 @@
+name: Bug Report
+description: File a report to help us improve NakshAstraMCP
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!
+  - type: input
+    id: version
+    attributes:
+      label: NakshAstraMCP Version
+      description: What version of the tool are you using? (e.g., v2.9.0)
+      placeholder: v2.x.x
+    validations:
+      required: true
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating System
+      options:
+        - Windows 11
+        - Windows 10
+        - macOS
+        - Linux
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to Reproduce
+      description: Please describe the steps to reproduce the issue.
+      placeholder: |
+        1. Run `nakshastramcp start --workspace /path/to/repo`
+        2. Wait for indexing...
+        3. Observe crash/error...
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs
+      description: Please paste relevant logs from `nakshastramcp status` or the log files.
+      placeholder: |
+        [INFO] Initializing workspace...
+        [ERROR] Failed to load grammar...
