@@ -1,5 +1,7 @@
-name: Feature Request
-description: Suggest an idea for NakshAstraMCP
+name: "💡 Feature Request"
+description: "Have an idea for a new capability? We'd love to hear it."
+title: "[FEAT]: "
+labels: ["enhancement"]
 body:
   - type: textarea
     id: description

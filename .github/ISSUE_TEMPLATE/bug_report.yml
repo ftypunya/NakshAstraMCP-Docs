@@ -1,10 +1,13 @@
-name: Bug Report
-description: File a report to help us improve NakshAstraMCP
+name: "🐞 Bug Report"
+description: "Found an issue? Help us maintain NakshAstra's world-class performance."
+title: "[BUG]: "
+labels: ["bug", "triage"]
 body:
   - type: markdown
     attributes:
       value: |
-        Thanks for taking the time to fill out this bug report!
+        ### 🚀 Thank you for helping us improve!
+        Before reporting, please ensure you've run `nakshastramcp doctor` to rule out environment issues.
   - type: input
     id: version
     attributes:
