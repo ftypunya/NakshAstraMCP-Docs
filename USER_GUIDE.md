@@ -13,7 +13,9 @@
 ## 🚀 Getting Started
 
 ### 1. Download & Placement
-Download the latest standalone executable (`nakshastramcp.exe` or equivalent for your OS). Place it in a dedicated directory and optionally add it to your system's PATH.
+Download the latest **standalone executable** (`nakshastramcp.exe` or equivalent for your OS) from the [Official Releases](https://github.com/vijaytank/NakshAstraMCP/releases). No Python or virtual environment setup is required. 
+
+Place the binary in a dedicated folder and optionally add it to your system's PATH for easier access.
 
 ### 2. Configuration for AI Clients
 
