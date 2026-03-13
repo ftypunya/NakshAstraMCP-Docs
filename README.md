@@ -28,7 +28,7 @@ NakshAstraMCP provides AI agents (Claude, Cursor, etc.) with deep, structural un
 ## 🚀 Quick Start
 
 ### 1. Download Standalone
-Download the latest **standalone executable** (`nakshastramcp.exe` for Windows) from the [official releases](https://github.com/vijaytank/NakshAstraMCP/releases). No Python installation required.
+Download the latest **standalone executable** (`nakshastramcp.exe` for Windows). No Python installation required.
 
 ### 2. Register a Workspace
 Open your terminal and register your project directory:
