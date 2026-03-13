@@ -23,7 +23,7 @@ This guide provides detailed instructions for installing and setting up NakshAst
 ## 🚀 Installation Steps
 
 ### 1. Download the Binary
-Download the latest version of `nakshastramcp.exe` (Windows) or the equivalent executable for your platform from the [official release page](https://github.com/vijaytank/NakshAstraMCP/releases). 
+Download the latest version of `nakshastramcp.exe` (Windows) or the equivalent executable for your platform.
 
 > [!IMPORTANT]
 > This is a **fully compiled standalone distribution**. You do **not** need to install Python, pip, or set up any virtual environments.
