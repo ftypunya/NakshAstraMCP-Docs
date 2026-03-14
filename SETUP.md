@@ -27,6 +27,15 @@ Download the latest version of `nakshastramcp.exe` (Windows) or the equivalent e
 
 > [!IMPORTANT]
 > This is a **fully compiled standalone distribution**. You do **not** need to install Python, pip, or set up any virtual environments.
+> 
+> However, if you prefer installing via the **Universal Wheel**, we recommend using [uv](https://github.com/astral-sh/uv):
+> ```powershell
+> powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
+> ```
+> And then:
+> ```powershell
+> uv tool install "path\to\nakshastramcp-3.1.0-cp313-cp313-win_amd64.whl" --force
+> ```
 
 > [!TIP]
 > Always download the accompanying `.pdb` (Windows) or debug symbols for your platform to assist with advanced troubleshooting if required.

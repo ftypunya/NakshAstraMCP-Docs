@@ -2,6 +2,18 @@
 
 All notable changes to the NakshAstraMCP public distribution will be documented in this file.
 
+## [3.1.0] - 2026-03-14
+
+### Features
+- Mandatory UI: Dashboard dependencies now included by default in all distributions.
+- Synchronization with core v3.1.0 baseline.
+
+## [3.0.0] - 2026-03-14
+
+### Features
+- Major version reset to 3.0.0.
+- Unified documentation synchronization.
+
 ## [2.9.0] - 2026-03-10
 
 ### Added

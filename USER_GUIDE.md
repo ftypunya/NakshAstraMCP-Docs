@@ -15,6 +15,12 @@
 ### 1. Download & Placement
 Download the latest **standalone executable** (`nakshastramcp.exe` or equivalent for your OS) from the [Official Releases](https://github.com/vijaytank/NakshAstraMCP/releases). No Python or virtual environment setup is required. 
 
+Alternatively, install the universal wheel using [uv](https://astral.sh/uv):
+```powershell
+powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
+uv tool install nakshastramcp-3.1.0-py3-none-any.whl --force
+```
+
 Place the binary in a dedicated folder and optionally add it to your system's PATH for easier access.
 
 ### 2. Configuration for AI Clients
