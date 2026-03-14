@@ -1,75 +1,108 @@
-# NakshAstraMCP
+<div align="center">
+  <img src="assets/hero_banner.png" alt="NakshAstraLite Hero Banner" width="100%">
 
-**A high-performance, low-latency MCP server for local code context.**
+  # NakshAstraMCP
+  
+  **The ultimate high-performance code context engine for AI-native development.**
 
-NakshAstraMCP provides AI agents (Claude, Cursor, etc.) with deep, structural understanding of your local codebase. It uses advanced AST parsing and semantic ranking to deliver contextually relevant code snippets, helping your AI tools understand complex relationships across files.
+  [![Version](https://img.shields.io/badge/version-3.1.0-blue.svg)](CHANGELOG.md)
+  [![License](https://img.shields.io/badge/license-Proprietary-red.svg)](LICENSE)
+  [![Status](https://img.shields.io/badge/status-Active-green.svg)](#)
+  [![Environment](https://img.shields.io/badge/env-Windows%20%2F%20macOS%20%2F%20Linux-lightgrey.svg)](#)
+
+</div>
+
+---
+
+## 📖 Overview
+
+NakshAstraMCP provides AI agents (Claude, Cursor, etc.) with deep, structural understanding of your local codebase. Using advanced AST parsing and high-speed semantic ranking, it delivers the exact context your developer tools need to solve complex problems across large projects.
+
+### 🗺 Documentation Hub
+Quickly navigate to detailed guides:
+
+| 🚀 [Setup Guide](SETUP.md) | 📖 [User Guide](USER_GUIDE.md) | 🛠 [Troubleshooting](TROUBLESHOOTING.md) |
+| :---: | :---: | :---: |
+| *Install & Configure* | *Advanced Usage & Tips* | *Fix Common Issues* |
+
+| 📜 [Changelog](CHANGELOG.md) | 🛡 [Security Policy](SECURITY.md) | 💬 [Discussions](DISCUSSIONS_WELCOME.md) |
+| :---: | :---: | :---: |
+| *Version History* | *Privacy & Data Safety* | *Community & Support* |
 
 ---
 
 ## 🏆 Assessment & Performance
-- **Overall Rating**: **9.3 / 10** (Industry-leading structural context)
-- **Query Latency (p95)**: **1.11ms** (Ultra-low latency indexing engine)
-- **Extensibility**: Support for Python, JavaScript, TypeScript, and more via high-performance Tree-sitter parsers.
 
-![NakshAstraMCP Dashboard - Search](assets/dashboard_search.png)
+- **Overall Efficiency**: **9.3 / 10** (Industry-leading structural context)
+- **Index/Search Latency**: **~1.1ms** (Ultra-low latency SQLite/Tantivy engine)
+- **Language Support**: Deep AST integration for Python, JavaScript, TypeScript, Java, and Kotlin.
 
-### Key Features
-- 🔍 **Hybrid Multi-Repo Search** — Search across all your projects simultaneously.
-- 🧠 **Semantic Reranking** — Results are reordered by query intent for maximum relevance.
-- 🌳 **AST-Aware Snippets** — Extracts meaningful code blocks, not just line-based chunks.
-- 📊 **Intelligent Scoring** — Ranks symbol importance across the entire codebase.
-- 👁️ **Real-Time Watcher** — Automatically updates the index as you edit files.
-- 🧹 **Operational Resilience** — Memory Guard, WAL checkpointing, and graceful shutdown.
+<br>
 
-![NakshAstraMCP Dashboard - Statistics](assets/dashboard_stats.png)
+<div align="center">
+  <img src="assets/dashboard_search.png" alt="NakshAstraMCP Dashboard - Search" width="90%">
+  <p><em>Lightning-fast hybrid search across multiple repositories.</em></p>
+</div>
+
+### ✨ Key Features
+- 🔍 **Hybrid Multi-Repo Search** — Indexed search across all your projects simultaneously.
+- 🧠 **Semantic Reranking** — FlashRank-powered results prioritized by conceptual relevance.
+- 🌳 **AST-Aware Analysis** — Understands code structure (classes, functions) rather than just text.
+- 📊 **Intelligent Scoring** — Ranks symbol importance based on codebase-wide references.
+- 👁️ **Real-Time Watcher** — Changes are indexed instantly as you save files.
+- 🧹 **Operational Resilience** — Built-in Memory Guard and WAL checkpointing for stability.
+
+<div align="center">
+  <img src="assets/dashboard_stats.png" alt="NakshAstraMCP Dashboard - Statistics" width="90%">
+  <p><em>Detailed indexing statistics and server health monitoring.</em></p>
+</div>
 
 ---
 
-## 🚀 Quick Start
+## 🚀 Quick Start (Fast-Track)
 
-### 1. Install via UV
-Ensure you have [uv](https://astral.sh/uv) installed, then run:
+### 1. Unified Installation
+Requires [uv](https://astral.sh/uv). Install the secure binary wheel directly:
+
+**📥 [Download v3.2.0 Secure Wheel (Windows)](https://github.com/vijaytank/NakshAstraMCP-Docs/releases/download/3.0.0/nakshastramcp-3.2.0-cp313-cp313-win_amd64.whl)**
+
 ```powershell
-uv tool install nakshastramcp-3.1.0-py3-none-any.whl --force
+uv tool install nakshastramcp-3.2.0-cp313-cp313-win_amd64.whl --force
 ```
 
-### 2. Register a Workspace
-Register your project directory to begin indexing:
+### 2. Register & Index
+Initialize your workspace roots to build the local knowledge graph:
 ```powershell
 nakshastramcp start --workspace C:\path\to\your\project
 ```
 
-### 3. Check Status
-Verify that your repository is indexed and the server is healthy:
+### 3. Verification & Health
 ```powershell
-nakshastramcp status
-```
-
-### 4. Health Check (Doctor)
-Run the built-in diagnostic tool:
-```powershell
-nakshastramcp doctor
+nakshastramcp status  # Check indexing progress
+nakshastramcp doctor  # Perform full environment audit
 ```
 
 ---
 
-## 🌉 Connecting Multiple Clients
+## 🌉 Multi-Client Connectivity
 
-NakshAstraMCP supports concurrent access from multiple clients (e.g., Cursor and VS Code) using a **Dual Transport Bridge**.
+NakshAstraMCP supports concurrent sessions from multiple IDEs via the **Dual Transport Bridge**.
 
-- **Primary IDE**: Configure your main IDE to start the server. It will automatically host a background bridge.
-- **Secondary Tools**: Connect to `http://127.0.0.1:2102/mcp` while your primary IDE is active.
+- **Primary Host**: Your main IDE (e.g., Cursor) starts the host session.
+- **HTTP Follower**: Configure secondary tools (e.g., VS Code extension) to connect to the bridge:
+  - **URL**: `http://127.0.0.1:2102/mcp`
+  - **Type**: `streamable-http`
 
 ---
 
 ## 🛡 Security & Privacy
 
-- **Local Processing**: All analysis and indexing are performed on your local hardware.
-- **Secret Redaction**: Automatic detection prevents indexing of API keys or sensitive strings.
-- **Workspace Jail**: The server only accesses directories you explicitly register.
+- **100% Local**: No source code or indices ever leave your machine.
+- **Sensitive Data Detection**: Integrated secret scanner prevents indexing of API keys.
+- **Sandboxed Execution**: The engine only accesses registered workspace roots.
 
 ---
 
-## License
-
-Proprietary / Personal Use Only.
+<div align="center">
+  <p>&copy; 2026 Vijay Tank. All rights reserved.</p>
+</div>

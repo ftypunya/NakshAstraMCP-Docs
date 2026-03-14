@@ -1,4 +1,8 @@
-# NakshAstraMCP — User Guide
+# 📖 NakshAstraMCP User Guide
+
+> **Master your workflow**: Deep analysis, multi-client connectivity, and visualization.
+
+---
 
 > **Vision**: Empower AI agents with high-fidelity local code context at zero infrastructure cost.
 
@@ -16,7 +20,7 @@
 Ensure [uv](https://astral.sh/uv) is installed, then install the universal wheel:
 ```powershell
 powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
-uv tool install nakshastramcp-3.1.0-py3-none-any.whl --force
+uv tool install nakshastramcp-3.2.0-cp313-cp313-win_amd64.whl --force
 ```
 
 ### 2. Configuration for AI Clients
@@ -94,3 +98,11 @@ When the host is active, other tools can connect to the bridge:
 - **Secret Detection**: Automatically prevents indexing of API keys and sensitive strings.
 - **Access Control**: The server is locked to the workspace roots you've explicitly registered.
 - **Zero Telemetry**: No data collection. Fully local execution.
+
+---
+
+<p align="center">
+  <a href="README.md">🏠 Home</a> | 
+  <a href="SETUP.md">🚀 Setup Guide</a> | 
+  <a href="TROUBLESHOOTING.md">🛠 Troubleshooting</a>
+</p>

@@ -1,4 +1,8 @@
-# NakshAstraMCP — Troubleshooting Guide
+# 🛠 NakshAstraMCP Troubleshooting Guide
+
+> **Recovery Center**: Resolve connectivity, indexing, and platform-specific issues.
+
+---
 
 This guide helps resolve common issues encountered while setting up or using NakshAstraMCP.
 
@@ -52,3 +56,11 @@ If you need to investigate further, NakshAstraMCP maintains logs in your platfor
 - **macOS**: `~/Library/Application Support/nakshastramcp/logs`
 
 When reporting a bug, please include the relevant logs from the last session. **Note**: Source code snippets are never logged; only indexing counts and performance metrics are tracked.
+
+---
+
+<p align="center">
+  <a href="README.md">🏠 Home</a> | 
+  <a href="SETUP.md">🚀 Setup Guide</a> | 
+  <a href="USER_GUIDE.md">📖 User Guide</a>
+</p>
