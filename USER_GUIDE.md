@@ -12,16 +12,12 @@
 
 ## 🚀 Getting Started
 
-### 1. Download & Placement
-Download the latest **standalone executable** (`nakshastramcp.exe` or equivalent for your OS) from the [Official Releases](https://github.com/vijaytank/NakshAstraMCP/releases). No Python or virtual environment setup is required. 
-
-Alternatively, install the universal wheel using [uv](https://astral.sh/uv):
+### 1. Installation
+Ensure [uv](https://astral.sh/uv) is installed, then install the universal wheel:
 ```powershell
 powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
 uv tool install nakshastramcp-3.1.0-py3-none-any.whl --force
 ```
-
-Place the binary in a dedicated folder and optionally add it to your system's PATH for easier access.
 
 ### 2. Configuration for AI Clients
 
@@ -31,19 +27,38 @@ Add the following to your `claude_desktop_config.json`:
 {
   "mcpServers": {
     "nakshastramcp": {
-      "command": "C:\\path\\to\\nakshastramcp.exe",
+      "command": "nakshastramcp",
       "args": ["start"]
     }
   }
 }
 ```
 
-#### Cursor IDE / Antigravity
+#### Cursor IDE
 1. Open Settings -> Models -> MCP.
 2. Add New MCP Server.
 3. Name: `NakshAstra`.
-4. Command: `C:\path\to\nakshastramcp.exe`.
+4. Command: `nakshastramcp`.
 5. Arguments: `start`, `--transport`, `stdio`.
+
+#### Antigravity (mcp_config.json)
+Add the following to your `mcp_config.json`:
+```json
+{
+  "mcpServers": {
+    "nakshastramcp": {
+      "command": "nakshastramcp",
+      "args": [
+        "start",
+        "--transport",
+        "stdio"
+      ],
+      "type": "stdio",
+      "disabled": false
+    }
+  }
+}
+```
 
 ---
 
@@ -65,12 +80,12 @@ When the host is active, other tools can connect to the bridge:
 
 | Action | Command |
 | --- | --- |
-| **Start & Register** | `nakshastramcp.exe start --workspace <path>` |
-| **Visual Dashboard** | `nakshastramcp.exe ui` |
-| **Health Check** | `nakshastramcp.exe doctor` |
-| **Cleanup (GC)** | `nakshastramcp.exe gc` |
-| **Check Health** | `nakshastramcp.exe status` |
-| **Check Version** | `nakshastramcp.exe --version` |
+| **Start & Register** | `nakshastramcp start --workspace <path>` |
+| **Visual Dashboard** | `nakshastramcp ui` |
+| **Health Check** | `nakshastramcp doctor` |
+| **Cleanup (GC)** | `nakshastramcp gc` |
+| **Check Health** | `nakshastramcp status` |
+| **Check Version** | `nakshastramcp --version` |
 
 ---
 

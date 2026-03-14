@@ -27,26 +27,28 @@ NakshAstraMCP provides AI agents (Claude, Cursor, etc.) with deep, structural un
 
 ## 🚀 Quick Start
 
-### 1. Download Standalone
-Download the latest **standalone executable** (`nakshastramcp.exe` for Windows). No Python installation required.
+### 1. Install via UV
+Ensure you have [uv](https://astral.sh/uv) installed, then run:
+```powershell
+uv tool install nakshastramcp-3.1.0-py3-none-any.whl --force
+```
 
 ### 2. Register a Workspace
-Open your terminal and register your project directory:
+Register your project directory to begin indexing:
 ```powershell
-.\nakshastramcp.exe start --workspace C:\path\to\your\project
+nakshastramcp start --workspace C:\path\to\your\project
 ```
-The server will automatically begin indexing.
 
 ### 3. Check Status
 Verify that your repository is indexed and the server is healthy:
 ```powershell
-.\nakshastramcp.exe status
+nakshastramcp status
 ```
 
 ### 4. Health Check (Doctor)
-Run the built-in diagnostic tool to ensure your environment is optimized:
+Run the built-in diagnostic tool:
 ```powershell
-.\nakshastramcp.exe doctor
+nakshastramcp doctor
 ```
 
 ---
