@@ -1,11 +1,11 @@
 <div align="center">
-  <img src="assets/hero_banner.png" alt="NakshAstraLite Hero Banner" width="100%">
+  <img src="assets/hero_banner.png" alt="NakshAstraMCP Hero Banner" width="100%">
 
   # NakshAstraMCP
   
   **The ultimate high-performance code context engine for AI-native development.**
 
-  [![Version](https://img.shields.io/badge/version-3.1.0-blue.svg)](CHANGELOG.md)
+  [![Version](https://img.shields.io/badge/version-3.5.0-blue.svg)](CHANGELOG.md)
   [![License](https://img.shields.io/badge/license-Proprietary-red.svg)](LICENSE)
   [![Status](https://img.shields.io/badge/status-Active-green.svg)](#)
   [![Environment](https://img.shields.io/badge/env-Windows%20%2F%20macOS%20%2F%20Linux-lightgrey.svg)](#)
@@ -16,7 +16,7 @@
 
 ## 📖 Overview
 
-NakshAstraMCP provides AI agents (Claude, Cursor, etc.) with deep, structural understanding of your local codebase. Using advanced AST parsing and high-speed semantic ranking, it delivers the exact context your developer tools need to solve complex problems across large projects.
+NakshAstraMCP provides AI agents (Claude, Cursor, Antigravity, etc.) with deep, structural understanding of your local codebase. Using advanced AST parsing and high-speed semantic ranking, it delivers the exact context your developer tools need to solve complex problems across large projects.
 
 ### 🗺 Documentation Hub
 Quickly navigate to detailed guides:
@@ -34,8 +34,9 @@ Quickly navigate to detailed guides:
 ## 🏆 Assessment & Performance
 
 - **Overall Efficiency**: **9.3 / 10** (Industry-leading structural context)
-- **Index/Search Latency**: **~1.1ms** (Ultra-low latency SQLite/Tantivy engine)
-- **Language Support**: Deep AST integration for Python, JavaScript, TypeScript, Java, and Kotlin.
+- **Index/Search Latency**: **~1.1ms p95** (Ultra-low latency on 10,000-file repos)
+- **Idle Memory**: **< 150 MB RAM**
+- **Language Support**: Deep AST integration for **Python, JavaScript, TypeScript, Java, and Kotlin**.
 
 <br>
 
@@ -46,11 +47,13 @@ Quickly navigate to detailed guides:
 
 ### ✨ Key Features
 - 🔍 **Hybrid Multi-Repo Search** — Indexed search across all your projects simultaneously.
-- 🧠 **Semantic Reranking** — FlashRank-powered results prioritized by conceptual relevance.
+- 🧠 **Semantic Reranking** — AI-powered results prioritized by conceptual relevance.
 - 🌳 **AST-Aware Analysis** — Understands code structure (classes, functions) rather than just text.
 - 📊 **Intelligent Scoring** — Ranks symbol importance based on codebase-wide references.
 - 👁️ **Real-Time Watcher** — Changes are indexed instantly as you save files.
-- 🧹 **Operational Resilience** — Built-in Memory Guard and WAL checkpointing for stability.
+- 📈 **Visual Dashboard** — Interactive Streamlit-based UI with graph visualization, search, and health monitoring.
+- 🚫 **`.mcpignore` Support** — Fine-grained control over which files and directories are indexed.
+- 🧹 **Operational Resilience** — Built-in Memory Guard and automatic checkpointing for stability.
 
 <div align="center">
   <img src="assets/dashboard_stats.png" alt="NakshAstraMCP Dashboard - Statistics" width="90%">
@@ -64,10 +67,10 @@ Quickly navigate to detailed guides:
 ### 1. Unified Installation
 Requires [uv](https://astral.sh/uv). Install the secure binary wheel directly:
 
-**📥 [Download v3.2.0 Secure Wheel (Windows)](https://github.com/vijaytank/NakshAstraMCP-Docs/releases/download/3.0.0/nakshastramcp-3.2.0-cp313-cp313-win_amd64.whl)**
+**📥 [Download v3.5.0 Secure Wheel (Windows)](https://github.com/vijaytank/NakshAstraMCP-Docs/releases/download/v3.5.0/nakshastramcp-3.5.0-cp313-cp313-win_amd64.whl)**
 
 ```powershell
-uv tool install nakshastramcp-3.2.0-cp313-cp313-win_amd64.whl --force
+uv tool install nakshastramcp-3.5.0-cp313-cp313-win_amd64.whl --force
 ```
 
 ### 2. Register & Index
@@ -81,6 +84,18 @@ nakshastramcp start --workspace C:\path\to\your\project
 nakshastramcp status  # Check indexing progress
 nakshastramcp doctor  # Perform full environment audit
 ```
+
+---
+
+## 💻 Hardware Tiers
+
+NakshAstraMCP adapts to your system automatically:
+
+| Tier | Specs | Capabilities |
+|------|-------|-------------|
+| **Minimal** | 2 cores / 4 GB RAM | Core search engine |
+| **Recommended** | 4 cores / 8 GB RAM | + Semantic reranking + High-performance indexing |
+| **Optimal** | 8+ cores / 16 GB RAM | Full graph analysis + Deep reranking |
 
 ---
 
@@ -100,6 +115,7 @@ NakshAstraMCP supports concurrent sessions from multiple IDEs via the **Dual Tra
 - **100% Local**: No source code or indices ever leave your machine.
 - **Sensitive Data Detection**: Integrated secret scanner prevents indexing of API keys.
 - **Sandboxed Execution**: The engine only accesses registered workspace roots.
+- **Zero Telemetry**: No usage data is collected. Fully offline operation.
 
 ---
 
