@@ -1,6 +1,6 @@
 <div align="center" markdown="1">
 
-<img src="assets/hero_banner.png" alt="NakshAstraMCP Hero Banner" width="100%">
+<img src="assets/logo.png" alt="NakshAstraMCP Hero Banner" width="100%">
 
 **The ultimate high-performance code context engine for AI-native development.**
 
