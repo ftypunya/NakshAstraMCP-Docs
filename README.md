@@ -4,7 +4,7 @@
 
 **The ultimate high-performance code context engine for AI-native development.**
 
-[![Version](https://img.shields.io/badge/version-3.5.0-blue.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-3.7.0-blue.svg)](CHANGELOG.md)
 [![License](https://img.shields.io/badge/license-Proprietary-red.svg)](LICENSE)
 [![Status](https://img.shields.io/badge/status-Active-green.svg)](#)
 [![Environment](https://img.shields.io/badge/env-Windows%20%2F%20macOS%20%2F%20Linux-lightgrey.svg)](#)
@@ -45,14 +45,15 @@ Quickly navigate to detailed guides:
 </div>
 
 ### ✨ Key Features
-- 🔍 **Hybrid Multi-Repo Search** — Indexed search across all your projects simultaneously.
-- 🧠 **Semantic Reranking** — AI-powered results prioritized by conceptual relevance.
-- 🌳 **AST-Aware Analysis** — Understands code structure (classes, functions) rather than just text.
-- 📊 **Intelligent Scoring** — Ranks symbol importance based on codebase-wide references.
-- 👁️ **Real-Time Watcher** — Changes are indexed instantly as you save files.
-- 📈 **Visual Dashboard** — Interactive Streamlit-based UI with graph visualization, search, and health monitoring.
+- 🔍 **Hybrid Multi-Repo Search** — Indexed search across all your projects simultaneously. Automatic merged results when no workspace path is specified.
+- 🧠 **Semantic Reranking** — AI-powered results prioritized by conceptual relevance using FlashRank.
+- 🌳 **AST-Aware Analysis** — Understands code structure (classes, functions, imports) with deep support for Python, JS/TS, Java, and Kotlin.
+- 📊 **Intelligent Scoring** — Ranks symbol importance based on codebase-wide references and PageRank scoring.
+- 👁️ **Real-Time Watcher** — Changes are indexed instantly with debouncing and mass-update protection.
+- 🧩 **Runtime Language Addons** — Provision new Tree-sitter grammars (Go, Rust, etc.) at runtime without server restarts.
+- 📈 **Visual Dashboard** — Interactive Nebula Graph UI with persistent symbol edges and health monitoring.
 - 🚫 **`.mcpignore` Support** — Fine-grained control over which files and directories are indexed.
-- 🧹 **Operational Resilience** — Built-in Memory Guard and automatic checkpointing for stability.
+- 🧹 **Operational Resilience** — Built-in Memory Guard, WAL checkpointing, and graceful shutdown for enterprise stability.
 
 <div align="center">
   <img src="assets/dashboard_stats.png" alt="NakshAstraMCP Dashboard - Statistics" width="90%">
@@ -66,10 +67,10 @@ Quickly navigate to detailed guides:
 ### 1. Unified Installation
 Requires [uv](https://astral.sh/uv). Install the secure binary wheel directly:
 
-**📥 [Download v3.5.0 Secure Wheel (Windows)](https://github.com/vijaytank/NakshAstraMCP-Docs/releases/download/v3.5.0/nakshastramcp-3.5.0-cp313-cp313-win_amd64.whl)**
+**📥 [Download v3.7.0 Secure Wheel (Windows)](https://github.com/vijaytank/NakshAstraMCP-Docs/releases/download/v3.7.0/nakshastramcp-3.7.0-cp313-cp313-win_amd64.whl)**
 
 ```powershell
-uv tool install nakshastramcp-3.5.0-cp313-cp313-win_amd64.whl --force
+uv tool install nakshastramcp-3.7.0-cp313-cp313-win_amd64.whl --force
 ```
 
 ### 2. Register & Index

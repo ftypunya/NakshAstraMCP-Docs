@@ -20,7 +20,7 @@
 Ensure [uv](https://astral.sh/uv) is installed, then install the universal wheel:
 ```powershell
 powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
-uv tool install nakshastramcp-3.5.0-cp313-cp313-win_amd64.whl --force
+uv tool install nakshastramcp-3.7.0-cp313-cp313-win_amd64.whl --force
 ```
 
 ### 2. Configuration for AI Clients
@@ -101,6 +101,7 @@ NakshAstraMCP automatically adapts its engine capabilities based on your availab
 | --- | --- |
 | **Start & Register** | `nakshastramcp start --workspace <path>` |
 | **Visual Dashboard** | `nakshastramcp ui` |
+| **Language Addons** | `nakshastramcp provision --lang <name> --lib <path>` |
 | **Health Check** | `nakshastramcp doctor` |
 | **Cleanup (GC)** | `nakshastramcp gc` |
 | **Check Status** | `nakshastramcp status` |
@@ -142,6 +143,20 @@ __pycache__/
 ```
 
 > **Tip**: Changes to `.mcpignore` take effect immediately — the real-time watcher picks them up automatically.
+
+---
+
+## 🧩 Adding New Language Support (Addons)
+
+NakshAstraMCP supports [Tree-sitter](https://tree-sitter.github.io/tree-sitter/) grammars. While popular languages like Python, JS/TS, Java, and Kotlin are built-in, you can add any other language at runtime.
+
+### Provisioning a Language
+1.  **Obtain a compiled grammar** (`.dll` for Windows, `.so` for Linux/macOS).
+2.  **Provision the language**:
+    ```powershell
+    nakshastramcp provision --lang go --lib ./tree_sitter_go.dll
+    ```
+3.  **Verify**: The server will validate the binary and copy it to its internal store. No restart is required for the indexing engine to pick up the new file types.
 
 ---
 

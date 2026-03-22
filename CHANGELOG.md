@@ -2,6 +2,32 @@
 
 All notable changes to the NakshAstraMCP public distribution will be documented in this file.
 
+## [3.7.0] - 2026-03-22
+
+### Features
+- **Enhanced Kotlin Support**: Correctly identify `import` statements and `property` declarations in Kotlin files.
+- **Nebula Graph Persistence**: Symbol graph edges are now saved to the database, enabling full file connectivity in the visual dashboard.
+
+### Improvements
+- **Multi-Workspace Fallback**: Search tools now automatically search across all registered workspaces if no specific path is provided.
+
+## [3.7.0] - 2026-03-22
+
+### Features
+- **Multi-Workspace Search**: Results from all registered repositories are merged and sorted by relevance score.
+
+## [3.6.1] - 2026-03-20
+
+### Bug Fixes
+- Resolved database locking issues during intensive UI search operations.
+- Fixed language-agnostic graph resolutions for improved visualization accuracy.
+
+## [3.6.0] - 2026-03-19
+
+### Features
+- **Runtime Language Addons**: Support for provisioning any Tree-sitter grammar at runtime (e.g., Go, Rust, Ruby).
+- **Operational Resilience**: Hardened environment checks and concurrency management for enterprise-scale deployments.
+
 ## [3.5.0] - 2026-03-15
 
 ### Features
